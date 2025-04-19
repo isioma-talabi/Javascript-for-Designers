@@ -6,10 +6,11 @@
 
 body {
   font-family: "Marcellus", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
   color: #2a2a2a;
   margin: 0;
+  overflow-x: hidden;
 }
 
 nav {
@@ -40,13 +41,16 @@ main > a {
 
 h1 {
   font-family: "Aladin", serif;
-  font-size: 60px;
-  margin: 10px;
+  font-size: 65px;
+  margin: 10px 0;
+  color: #25591f;
 }
 
 section > img {
-  width: 500px;
+  width: 450px;
+  height: 675px;
   object-fit: contain;
+  margin-left: 200px;
 }
 
 main {
@@ -54,6 +58,74 @@ main {
   z-index: 1;
   background-color: white;
   min-height: 100vh;
-  
+  transition: transform 0.5s;
+  display: flex;
+  padding: 100px;
+}
 
+.open {
+  transform: translate(240px, 0);
+}
+
+#toggle-nav {
+  text-decoration: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 24px;
+  color: #2a2a2a;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+a > img {
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+/* Main Section Styling */
+.main-section {
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-section section {
+  width: 550px;
+}
+
+button {
+  padding: 15px;
+  width: 200px;
+  font-family: "Marcellus", sans-serif;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: #593a0e;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: #25591f;
+  cursor: pointer;
+}
+
+/* Slide Section */
+
+.slides {
+  height: 675px;
+  position: relative;
+}
+
+.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slides img:first-child {
+  z-index: 1;
 }
